@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ConsoleApp1
 {
@@ -11,7 +11,7 @@ namespace ConsoleApp1
         static void odev()
         {
             int islem;
-            BASADON:
+        BASADON:
             Console.Write("İşlem seçiniz:\n\n1- 5'e bölünebilen sayıları ekrana yazdırma örneği\n2- Overload metod örneği\n\nSeçimimiz:");
             islem = Convert.ToInt32(Console.ReadLine());
 
@@ -41,7 +41,7 @@ namespace ConsoleApp1
                         int a = Convert.ToInt32(Console.ReadLine());
                         Console.Write("\nİkinci sayıyı giriniz:");
                         int b = Convert.ToInt32(Console.ReadLine());
-                        sayilaricarp(a,b);
+                        sayilaricarp(a, b);
                     }
                     else if (kontrol == 3)
                     {
@@ -52,13 +52,14 @@ namespace ConsoleApp1
                         int b = Convert.ToInt32(Console.ReadLine());
                         Console.Write("\nÜçüncü sayıyı giriniz:");
                         int c = Convert.ToInt32(Console.ReadLine());
-                        sayilaricarp(a, b,c);
+                        sayilaricarp(a, b, c);
                     }
 
                     break;
 
                 default:
 
+                    Console.Clear();
                     goto BASADON;
             }
 
@@ -79,7 +80,7 @@ namespace ConsoleApp1
 
             int sayac = 0;
 
-            for(int i = a; i <= b; i++)
+            for (int i = a; i <= b; i++)
             {
                 if (i % 5 == 0)
                 {
@@ -99,16 +100,16 @@ namespace ConsoleApp1
                 case 1:
                     Console.Clear();
                     odev();
-                break;
+                    break;
 
                 default:
                     Console.Clear();
                     Console.WriteLine("\nGirdiğiniz değeri kontrol ederek tekrar giriniz.");
                     odev();
-                break;
+                    break;
             }
         }
-        
+
         static void sayilaricarp(int a, int b)
         {
             Console.Clear();
@@ -120,18 +121,18 @@ namespace ConsoleApp1
                 case 1:
                     Console.Clear();
                     odev();
-                break;
+                    break;
 
                 default:
                     Console.Clear();
                     Console.WriteLine("\nGirdiğiniz değeri kontrol ederek tekrar giriniz.");
                     odev();
-                break;
+                    break;
 
             }
         }
 
-        static void sayilaricarp(int a, int b,int c)
+        static void sayilaricarp(int a, int b, int c)
         {
             Console.Clear();
             Console.WriteLine("Sonuç= {0} --Bu sonuç üç parametreli sayilaricarp metoduyla bulundu.--", a * b * c);
@@ -142,15 +143,14 @@ namespace ConsoleApp1
                 case 1:
                     Console.Clear();
                     odev();
-                break;
+                    break;
 
                 default:
                     Console.Clear();
                     Console.WriteLine("\nGirdiğiniz değeri kontrol ederek tekrar giriniz.");
                     odev();
-                break;
+                    break;
             }
         }
     }
 }
-
